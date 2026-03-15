@@ -10,20 +10,16 @@ For a detailed breakdown of the project’s motivation, competitive analysis, an
 
 This document provides in-depth information on:
 
-* 
-**The "Why"**: Personal motivation and the desire to play with friends remotely.
+* **The "Why"**: Personal motivation and the desire to play with friends remotely.
 
 
-* 
-**Competitive Landscape**: Analysis of existing web apps like UsDoku and academic research like SudoDuel.
+* **Competitive Landscape**: Analysis of existing web apps like UsDoku and academic research like SudoDuel.
 
 
-* 
-**Architecture**: A deep dive into the serverless approach using Firebase transactions.
+* **Architecture**: A deep dive into the serverless approach using Firebase transactions.
 
 
-* 
-**Algorithm**: Step-by-step logic for randomized backtracking and unique solution validation.
+* **Algorithm**: Step-by-step logic for randomized backtracking and unique solution validation.
 
 
 
@@ -31,21 +27,16 @@ This document provides in-depth information on:
 
 ### 🚀 Key Features
 
-* 
-**Ranked Queue**: Competitive play featuring Elo-based matchmaking.
+* **Ranked Queue**: Competitive play featuring Elo-based matchmaking.
 
 
-* 
-**Casual Modes**: Includes $1 \vee 1$ on the same board, co-op modes, and powerup modes.
+* **Casual Modes**: Includes $1 \vee 1$ on the same board, co-op modes, and powerup modes.
 
 
-* 
-**Unique Powerup System**: Players fight for powerups at random intervals that can affect the opponent's board.
+* **Unique Powerup System**: Players fight for powerups at random intervals that can affect the opponent's board.
 
 
-* 
-**Cross-Platform**: A single codebase for mobile, web, and desktop.
-
+* **Cross-Platform**: A single codebase for mobile, web, and desktop.
 
 
 ---
@@ -56,20 +47,16 @@ Unlike many competitors that use custom Node.js servers and WebSockets, Sudoku G
 
 #### Tech Stack
 
-* 
-**Frontend**: [Flutter](https://www.google.com/search?q=https://flutter.dev/) & [Dart](https://www.google.com/search?q=https://dart.dev/).
+* **Frontend**: [Flutter](https://www.google.com/search?q=https://flutter.dev/) & [Dart](https://www.google.com/search?q=https://dart.dev/).
 
 
-* 
-**Backend**: [Firebase](https://www.google.com/search?q=https://firebase.google.com/) for authentication, real-time database, and cloud storage without server infrastructure management.
+* **Backend**: [Firebase](https://www.google.com/search?q=https://firebase.google.com/) for authentication, real-time database, and cloud storage without server infrastructure management.
 
 
-* 
-**State Management**: Uses 4 Change-Notifier providers: **Sudoku**, **Powerup**, **Theme**, and **Lobby**.
+* **State Management**: Uses 4 Change-Notifier providers: **Sudoku**, **Powerup**, **Theme**, and **Lobby**.
 
 
-* 
-**Synchronization**: Leverages Firebase **transactions** for multiplayer sync and claiming victory.
+* **Synchronization**: Leverages Firebase **transactions** for multiplayer sync and claiming victory.
 
 
 
@@ -77,12 +64,10 @@ Unlike many competitors that use custom Node.js servers and WebSockets, Sudoku G
 
 The game ensures high-quality, solvable puzzles through a two-step process:
 
-1. 
-**Generation**: Uses randomized backtracking with shuffled candidates [1–9] to fill a grid while validating Sudoku constraints.
+1. **Generation**: Uses randomized backtracking with shuffled candidates [1–9] to fill a grid while validating Sudoku constraints.
 
 
-2. 
-**Reduction**: Randomly removes 35–55 cells and verifies that exactly one unique solution remains; if not, the cell is restored.
+2. **Reduction**: Randomly removes 35–55 cells and verifies that exactly one unique solution remains; if not, the cell is restored.
 
 
 
