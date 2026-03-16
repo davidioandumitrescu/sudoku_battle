@@ -10,7 +10,7 @@
 
 ## 🎬 Demo
 
-[![Sudoku Gladiators Demo]([https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID](https://youtu.be/V-_eNQcfJ-Y))
+[![Sudoku Gladiators Demo](https://www.youtube.com/watch?v=V-_eNQcfJ-Y)
 
 ---
 
