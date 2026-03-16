@@ -10,7 +10,7 @@
 
 ## 🎬 Demo
 
-[![Sudoku Gladiators Demo](https://www.youtube.com/watch?v=V-_eNQcfJ-Y)]
+[![Watch the demo](https://img.shields.io/badge/YouTube-Watch%20Demo-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=V-_eNQcfJ-Y)
 
 ---
 
