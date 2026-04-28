@@ -31,19 +31,96 @@ This project was submitted as a Bachelor's thesis at the Faculty of Mathematics 
 
 ---
 
-## ✨ Features
+## 📸 Screenshots
 
-### 🎮 Game Modes
-| Mode | Description |
-|---|---|
-| **Classic Solo** | Standard Sudoku with difficulty selection and hints |
-| **1v1 Competitive** | Race to complete the same board faster than your opponent |
-| **Co-op** | Two players solve a shared board together, sharing hints and mistakes |
-| **Powerup Mode** | 1v1 with powerups that spawn on the board mid-game |
-| **Ranked** | Elo-based competitive queue with expanding search radius |
+### Home Screen
+<p align="center">
+  <img src="screenshots/home_screen.png" width="420" alt="Home Screen" />
+</p>
 
-### ⚡ Powerup System
-Powerups spawn on empty cells during gameplay. Solve the cell to claim the powerup, then use it strategically:
+The home screen greets players by name, shows their current Elo rating, and offers three entry points: Classic Mode, Ranked Queue, and Casual Multiplayer.
+
+---
+
+### 🎮 Classic Singleplayer
+
+<p align="center">
+  <img src="screenshots/classic_singleplayer.png" width="420" alt="Classic Singleplayer – Difficulty Selection" />
+</p>
+
+Solo play with fully customisable settings: choose your difficulty (Easy → Expert), toggle hints, and set how many mistakes are allowed before the game ends.
+
+---
+
+### 🏟️ Casual Multiplayer
+
+**Finding a lobby**
+
+<p align="center">
+  <img src="screenshots/lobby_searching.png" width="420" alt="Multiplayer Lobby Browser" />
+</p>
+
+Browse open lobbies filtered by game mode and difficulty, or jump straight into a private lobby with an access code.
+
+**Creating a lobby**
+
+<p align="center">
+  <img src="screenshots/lobby_creation.png" width="420" alt="Lobby Creation Dialog" />
+</p>
+
+Hosts configure the full game session before anyone joins: game mode, difficulty, time limit, hints, mistake limit, player cap, and public/private visibility.
+
+**Waiting room**
+
+<p align="center">
+  <img src="screenshots/lobby_screen.png" width="700" alt="Lobby Waiting Room – Host and Guest views" />
+</p>
+
+Both sides of the lobby waiting room shown side by side. The host sees a "Start Game" button; the guest sees puzzle information once it's generated. In-lobby chat is live before the game even begins.
+
+---
+
+### ⚔️ Classic Multiplayer (1v1)
+
+<p align="center">
+  <img src="screenshots/classic_sudoku_multiplayer.png" width="420" alt="Classic 1v1 Multiplayer" />
+</p>
+
+Both players race to complete the same puzzle. Progress bars at the top show how far each player has gotten in real time. Mistakes and completed cells are tracked per player.
+
+---
+
+### 🤝 Co-op Mode
+
+<p align="center">
+  <img src="screenshots/coop_mode.png" width="700" alt="Co-op Mode – both player views side by side" />
+</p>
+
+Two players share a single board. Blue cells are filled by you; green cells by your partner. A shared progress bar counts down to victory together.
+
+---
+
+### ⚡ Powerup Mode
+
+**Claiming a powerup**
+
+<p align="center">
+  <img src="screenshots/powerup_claim.png" width="420" alt="Powerup Mode – desktop" />
+  &nbsp;&nbsp;
+  <img src="screenshots/powerup_claimed_mobile.jpeg" width="220" alt="Powerup Mode – mobile, powerup claimed" />
+</p>
+
+Powerups spawn on empty cells mid-game. Solve the cell to claim the powerup, then tap it from your tray to unleash it at the right moment.
+
+**Powerup used — Freeze**
+
+<p align="center">
+  <img src="screenshots/sudoku_powerup_used_mobile.png" width="260" alt="Freeze powerup in effect on mobile" />
+</p>
+
+The Freeze powerup locks your opponent's input for 10 seconds — giving you precious breathing room to race ahead.
+
+**Available powerups:**
 
 | Powerup | Effect |
 |---|---|
@@ -56,14 +133,34 @@ Powerups spawn on empty cells during gameplay. Solve the cell to claim the power
 | 🛡️ Shield | Blocks the next incoming opponent powerup |
 | 💣 Bomb | Clears a 3×3 area of the opponent's completed cells |
 
-### 🏆 Ranking System
-Full Elo implementation with:
-- Starting rating of 1,000 for all players
-- K-factor of 32 for rating adjustments
-- Expanding search radius (starts at ±100, expands by 50 every 20s up to ±600)
-- 3-minute queue timeout
-- Atomic Firebase transactions to prevent race conditions during matchmaking
-- Global leaderboard with win rate tracking
+---
+
+### 🏆 Ranked Queue
+
+<p align="center">
+  <img src="screenshots/ranked_queue_screen.png" width="420" alt="Ranked Queue Screen" />
+</p>
+
+Ranked matches are played on Medium difficulty with no hints and a 10-minute time limit. The queue searches within ±100 Elo initially, expanding by ±50 every 20 seconds up to ±600. A live leaderboard is shown while you wait.
+
+**Ranking System:**
+- Starting rating: **1,000** for all players
+- K-factor: **32**
+- Queue timeout: **3 minutes**
+- Atomic Firebase transactions prevent race conditions during matchmaking
+
+---
+
+## ✨ Features
+
+### 🎮 Game Modes
+| Mode | Description |
+|---|---|
+| **Classic Solo** | Standard Sudoku with difficulty selection and hints |
+| **1v1 Competitive** | Race to complete the same board faster than your opponent |
+| **Co-op** | Two players solve a shared board together, sharing hints and mistakes |
+| **Powerup Mode** | 1v1 with powerups that spawn on the board mid-game |
+| **Ranked** | Elo-based competitive queue with expanding search radius |
 
 ---
 
